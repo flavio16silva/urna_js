@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .urna {
@@ -24,15 +25,21 @@ body {
 
 .teclado--linha {
     display: flex;
+    justify-content: center;
 }
 
 .teclado--botao{
-    width: 50px;
-    height: 30px;
+    width: 70px;
+    height: 40px;
     background-color: #000;
     color: #fff;
     font-size: 25px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #655;
 }
