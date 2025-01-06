@@ -1,5 +1,8 @@
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .urna {
@@ -16,4 +19,5 @@ body {
 
 .teclado{
     background-color: #403A3A;
+    margin-left: 30px;
 }
