@@ -21,3 +21,18 @@ body {
     background-color: #403A3A;
     margin-left: 30px;
 }
+
+.teclado--linha {
+    display: flex;
+}
+
+.teclado--botao{
+    width: 50px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
