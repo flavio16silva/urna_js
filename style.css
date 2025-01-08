@@ -75,6 +75,36 @@ body {
 
 .d-1-left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SEU VOTO */
+.d-1-1 {
+    height: 50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+/* VEREADOR */
+.d-1-2 {
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.d-1-3 {
+    height: 50px;
+    background-color: orange;
+}
+
+.d-1-4 {
+    height: 50px;
+    background-color: blue;
+    flex: 1;
+    line-height: 30px;
 }
 
 .d-1-right {
