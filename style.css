@@ -77,12 +77,12 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding-left: 20px ;
 }
 
 /* SEU VOTO */
 .d-1-1 {
     height: 50px;
-    background-color: red;
     display: flex;
     align-items: center;
 }
@@ -90,19 +90,45 @@ body {
 /* VEREADOR */
 .d-1-2 {
     height: 50px;
-    background-color: gray;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .d-1-3 {
     height: 50px;
-    background-color: orange;
+}
+
+.numero {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+@keyframes pisca {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 .d-1-4 {
     height: 50px;
-    background-color: blue;
     flex: 1;
     line-height: 30px;
 }
