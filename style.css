@@ -108,7 +108,7 @@ body {
     line-height: 40px;
     font-size: 25px;
 }
-
+/* Animação dos numeros na tela  */
 @keyframes pisca {
     0% {
         opacity: 0.2;
@@ -139,18 +139,18 @@ body {
     flex-direction: column;
     align-items: flex-end;
 }
-
+/* Foto dos candidatos */
 .d-1-image {
     border: 1px solid #000;
     background-color:  #fff;
     text-align: center;
     font-size: 14px;
 }
-
+/* Foto tamanho normal */
 .d-1-image img {
     width: 100%;
 }
-
+/* Foto tamanho menor */
 .d-1-image.small {
     width: 85%;
     font-size: 12px;
