@@ -17,6 +17,10 @@ function comecarEtapa(){
 
     let numeroHTML = ''
 
+    for(let i = 0; i < etapa.numeros; i++){
+        numeroHTML += '<div class="numero"></div>'
+    }
+
     seuVotoPara.style.display = 'none'
     cargo.innerHTML = etapa.titulo
     descricao.innerHTML = ''
@@ -40,3 +44,5 @@ function corrigir(){
 function confirmar(){
     alert('Clicou no botão confirmar')
 }
+
+comecarEtapa()
