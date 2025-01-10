@@ -5,8 +5,8 @@ let etapas = [
         candidatos: [
             {
                 numero: '38111',
-                nome: 'Fulano de Tal',
-                partido: 'ABC',
+                nome: 'Vulgo de Mendes',
+                partido: 'Conversas Estranhas',
                 fotos:[
                     {url:'38111.jpg', legenda: 'Vereador'}
                 ]
@@ -14,11 +14,27 @@ let etapas = [
             {
                 numero: '77222',
                 nome: 'Beltrano da Silva',
-                partido: 'DEFG',
+                partido: 'Associados',
                 fotos:[
                     {url:'77222.jpg', legenda: 'Vereador'}
                 ]
             },
+            {
+                numero: '44221',
+                nome: 'Zeca Zoeira Lemos',
+                partido: 'Piadas',
+                fotos:[
+                    {url:'77222.jpg', legenda: 'Vereador'}
+                ]
+            },
+            {
+                numero: '17117',
+                nome: 'Paulo Leveza',
+                partido: 'Sempre Leve',
+                fotos:[
+                    {url:'77222.jpg', legenda: 'Vereador'}
+                ]
+            }
         ]
     },
     {
@@ -27,9 +43,9 @@ let etapas = [
         candidatos: [
             {
                 numero: '99',
-                nome: 'Ciclano',
-                partido: 'ABC',
-                vice: 'Cic',
+                nome: 'Ciclano dos Venenos',
+                partido: 'Ciclos',
+                vice: 'Seringa Souza',
                 fotos:[
                     {url:'99.jpg', legenda: 'Prefeito'},
                     {url:'99_2.jpg', legenda: 'Vice-Prefeito', small: true}
@@ -37,14 +53,34 @@ let etapas = [
             },
             {
                 numero: '84',
-                nome: 'Zulano',
-                partido: 'QWERTY',
-                vice: 'Zul',
+                nome: 'Zuferson Augusto',
+                partido: 'Zunido',
+                vice: 'Zico Zero',
                 fotos:[
                     {url:'84.jpg', legenda: 'Prefeito'},
                     {url:'84_2.jpg', legenda: 'Vice-Prefeito', small: true}
                 ]
             },
+            {
+                numero: '01',
+                nome: 'Cap. Nascimento',
+                partido: 'Sobi Niguém',
+                vice: 'Zé Pequeno',
+                fotos:[
+                    {url:'84.jpg', legenda: 'Prefeito'},
+                    {url:'84_2.jpg', legenda: 'Vice-Prefeito', small: true}
+                ]
+            },
+            {
+                numero: '06',
+                nome: 'Zuado Sempre',
+                partido: 'Sem Noção Nenhuma',
+                vice: 'Zé Ninguém',
+                fotos:[
+                    {url:'84.jpg', legenda: 'Prefeito'},
+                    {url:'84_2.jpg', legenda: 'Vice-Prefeito', small: true}
+                ]
+            }
         ]
     }
 ];
