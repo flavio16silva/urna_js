@@ -41,7 +41,8 @@ function comecarEtapa(){
 function atualizarInterface(){
     let etapa = etapas[etapaAtual]
     let candidato = etapa.candidatos.filter( (item)=> {
-        if(item.numero === numero) {  //se o numero digitado for igual ao numero do item do candidato
+        //se o numero digitado for igual ao numero do item do candidato
+        if(item.numero === numero) {  
             return true
         } else {
             return false
@@ -79,7 +80,7 @@ function atualizarInterface(){
 
 function clicou(num) {
     let elementoNumero = document.querySelector('.numero.pisca')
-    let audio = document.querySelector('audio')
+    let audio = document.querySelector('audio') //audio
     if( elementoNumero !== null){
         elementoNumero.innerHTML = num
         numero = `${numero}${num}`
