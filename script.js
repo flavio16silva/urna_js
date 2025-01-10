@@ -79,6 +79,7 @@ function atualizarInterface(){
 
 function clicou(num) {
     let elementoNumero = document.querySelector('.numero.pisca')
+    let audio = document.querySelector('audio')
     if( elementoNumero !== null){
         elementoNumero.innerHTML = num
         numero = `${numero}${num}`
@@ -87,13 +88,24 @@ function clicou(num) {
         if (elementoNumero.nextElementSibling !== null){
             //mudando o pisca para proximo numero - nextElementSibling
             elementoNumero.nextElementSibling.classList.add('pisca') 
+            audio.currentTime = 0;
+            audio.play()
+            setTimeout(()=>{
+                audio.pause();
+            },100)
         } else {
+            audio.currentTime = 0;
+            audio.play()
+            setTimeout(()=>{
+                audio.pause();
+            },100)
             atualizarInterface()
         }
     }
 }
 
 function branco(){
+    let audio = document.querySelector('audio')
     numero = ''  
     votoBranco = true  
     
@@ -102,14 +114,28 @@ function branco(){
     numeros.innerHTML = ''    
     descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>'
     conteudoLateral.innerHTML = ''
-   
+    
+    audio.currentTime = 0;
+    audio.play()
+    setTimeout(()=>{
+        audio.pause();
+    },100)
 }
 
 function corrigir(){
+    let audio = document.querySelector('audio');
+
+    audio.currentTime = 0;
+    audio.play()
+    setTimeout(()=>{
+        audio.pause();
+    },100)
     comecarEtapa()
 }
 
 function confirmar(){
+    let audio = document.querySelector('audio')
+
     let etapa = etapas[etapaAtual]
     let votoConfirmado = false
 
@@ -129,15 +155,29 @@ function confirmar(){
     }
 
     if(votoConfirmado) {
+        audio.currentTime = 0
+        audio.play()
+        setTimeout(()=>{
+            audio.pause()
+        },100)
+
         etapaAtual++ //incrementando: passando para próxima tela
         if(etapas[etapaAtual] !== undefined){
             comecarEtapa()
         } else {
-            document.querySelector('.tela').innerHTML = 
-            '<div class="aviso--gigante pisca">FIM</div>'
+            let audio = document.querySelector('audio')          
+            console.log('FIM!')
+            document.querySelector('.tela').innerHTML = '<div  class="aviso--gigante pisca">FIM</div>'
             console.log(votos)
-        }
-    }
+           
+                setTimeout(()=>{                  
+                    audio.currentTime = 6
+                    audio.play()                    
+                },200);           
+              
+            }
+            
+        }           
 }
 
 comecarEtapa()
