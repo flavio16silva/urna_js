@@ -11,6 +11,7 @@ let numeros = document.querySelector('.d-1-3')
 let etapaAtual = 0
 let numero = ''  //irá receber o preenchimento dos numeros
 let votoBranco = false
+let votos = [] //guardar os votos
 
 
 //Funções
@@ -114,10 +115,16 @@ function confirmar(){
 
     if(votoBranco === true){
         votoConfirmado = true
-        console.log('Voto branco...')
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: 'branco'
+        })
     } else if (numero.length === etapa.numeros){
         votoConfirmado = true
-        console.log('confirmado numero '+numero)
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: numero
+        })
 
     }
 
@@ -128,6 +135,7 @@ function confirmar(){
         } else {
             document.querySelector('.tela').innerHTML = 
             '<div class="aviso--gigante pisca">FIM</div>'
+            console.log(votos)
         }
     }
 }
