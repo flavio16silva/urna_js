@@ -10,6 +10,7 @@ let numeros = document.querySelector('.d-1-3')
 //Variaveis de controle de ambiente
 let etapaAtual = 0
 let numero = ''  //irá receber o preenchimento dos numeros
+let votoBranco = false
 
 
 //Funções
@@ -17,6 +18,8 @@ function comecarEtapa(){
     let etapa = etapas[etapaAtual]
 
     let numeroHTML = ''
+    numero = ''
+    votoBranco = false
 
     for(let i = 0; i < etapa.numeros; i++){
         if(i === 0){
@@ -83,11 +86,19 @@ function clicou(num) {
 }
 
 function branco(){
-    alert('Clicou no botão branco')
+    numero = ''  
+    votoBranco = true  
+    
+    seuVotoPara.style.display = 'block'
+    aviso.style.display = 'block'
+    numeros.innerHTML = ''    
+    descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>'
+    conteudoLateral.innerHTML = ''
+   
 }
 
 function corrigir(){
-    alert('Clicou no botão corrigir')
+    comecarEtapa()
 }
 
 function confirmar(){
