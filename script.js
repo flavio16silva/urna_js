@@ -9,6 +9,7 @@ let numeros = document.querySelector('.d-1-3')
 
 //Variaveis de controle de ambiente
 let etapaAtual = 0
+let numero = ''  //irá receber o preenchimento dos numeros
 
 
 //Funções
@@ -18,7 +19,11 @@ function comecarEtapa(){
     let numeroHTML = ''
 
     for(let i = 0; i < etapa.numeros; i++){
-        numeroHTML += '<div class="numero"></div>'
+        if(i === 0){
+            numeroHTML += '<div class="numero pisca"></div>'
+        } else {
+            numeroHTML += '<div class="numero"></div>'
+        }
     }
 
     seuVotoPara.style.display = 'none'
@@ -29,8 +34,32 @@ function comecarEtapa(){
     numeros.innerHTML = numeroHTML
 }
 
+function atualizarInterface(){
+    let etapa = etapas[etapaAtual]
+    let candidato = etapa.candidatos.filter( (item)=> {
+        if(item.numero === numero) {  //se o numero digitado for igual ao numero do item do candidato
+            return true
+        } else {
+            return false
+        }
+    })
+    console.log('Candidato', candidato)
+}
+
 function clicou(num) {
-    alert('Clicou em num ' + num)
+    let elementoNumero = document.querySelector('.numero.pisca')
+    if( elementoNumero !== null){
+        elementoNumero.innerHTML = num
+        numero = `${numero}${num}`
+
+        elementoNumero.classList.remove('pisca')
+        if (elementoNumero.nextElementSibling !== null){
+            //mudando o pisca para proximo numero - nextElementSibling
+            elementoNumero.nextElementSibling.classList.add('pisca') 
+        } else {
+            atualizarInterface()
+        }
+    }
 }
 
 function branco(){
