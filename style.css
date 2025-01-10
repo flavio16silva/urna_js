@@ -94,12 +94,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/* Quadrados dos votos */
 .d-1-3 {
     display: flex;
+    justify-content: center;
     height: 50px;
 }
-
+/* Numeros digitados */
 .numero {
     display: inline-block;
     width: 40px;
