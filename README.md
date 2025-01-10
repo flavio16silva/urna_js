@@ -1,4 +1,4 @@
-# Urna em JS
+# Urna Eletrônica em JS
 
  - Projeto de Urna Eletrônica para mostrar os votos na tela;
  - Tecnologias utilizadas: HTML e CSS;
