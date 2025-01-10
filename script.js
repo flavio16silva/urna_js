@@ -51,15 +51,22 @@ function atualizarInterface(){
         seuVotoPara.style.display = 'block'
         aviso.style.display = 'block'
         descricao.innerHTML = `Nome: ${candidato.nome} <br>
-                                Partido: ${candidato.partido} <br>
-                                </div>`
+                               Partido: ${candidato.partido} <br>
+                               </div>`
         
         let fotosHTML = ''
         for( let i in candidato.fotos ){
-            fotosHTML = `<div class="d-1-image">
-                        <img src="images/${candidato.fotos[i].url}" alt="">
-                        ${candidato.fotos[i].legenda}
-                        </div>`
+            if(candidato.fotos[i].small){
+                fotosHTML += `<div class="d-1-image small">
+                                <img src="images/${candidato.fotos[i].url}" alt="">
+                                ${candidato.fotos[i].legenda}
+                                </div>`
+            } else {
+                fotosHTML += `<div class="d-1-image">
+                                <img src="images/${candidato.fotos[i].url}" alt="">
+                                ${candidato.fotos[i].legenda}
+                                </div>`
+            }
         }
         conteudoLateral.innerHTML = fotosHTML
     }   else {
@@ -102,7 +109,27 @@ function corrigir(){
 }
 
 function confirmar(){
-    alert('Clicou no botão confirmar')
+    let etapa = etapas[etapaAtual]
+    let votoConfirmado = false
+
+    if(votoBranco === true){
+        votoConfirmado = true
+        console.log('Voto branco...')
+    } else if (numero.length === etapa.numeros){
+        votoConfirmado = true
+        console.log('confirmado numero '+numero)
+
+    }
+
+    if(votoConfirmado) {
+        etapaAtual++ //incrementando: passando para próxima tela
+        if(etapas[etapaAtual] !== undefined){
+            comecarEtapa()
+        } else {
+            document.querySelector('.tela').innerHTML = 
+            '<div class="aviso--gigante pisca">FIM</div>'
+        }
+    }
 }
 
 comecarEtapa()
